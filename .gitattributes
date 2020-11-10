@@ -1,0 +1,8 @@
+# INFO: This disables Git Line Ending Conversion to enable a seamles Integration in a Visual Studio Code DevContainer (Docker/Linux) running on a Windows Operating System, see
+#           https://code.visualstudio.com/docs/remote/troubleshooting#_resolving-git-line-ending-issues-in-containers-resulting-in-many-modified-files
+#       and
+#           https://git-scm.com/docs/gitattributes#_checking_out_and_checking_in
+
+* text=auto eol=lf
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf

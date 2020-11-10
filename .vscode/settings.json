@@ -1,3 +1,143 @@
 {
+    // INFO: The pythonPath should be set to reference the python.exe in the local (virtual) Python Environment
+    //       A local (virtual) Environment can be set up by installing Python from
+    //          https://www.python.org/downloads/windows/
+    //       and (optionally) create a virtual Environment by using: python -m venv "<Path to the virtual Environment Folder>"
+    //       The required Python Packages can be installed by using: pip install -r "<Path to a requirements.txt File>"
+    "editor.wordWrap": "on",
+    "editor.mouseWheelZoom": true,
+    "editor.wrappingIndent": "indent",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
     "python.pythonPath": "c:\\Users\\jmetz\\Python_Local\\Python_37\\Virtual_Environments\\Python_3_7_TensorFlow_2_CPU_DB_Connect_November_2020\\Scripts\\python.exe",
+    "python.formatting.autopep8Args": [
+        "--ignore",
+        "E402, E302, E305",
+        "--max-line-length",
+        "180"
+    ],
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "INFO",
+        "IMPORTANT",
+        "PLACEHOLDER",
+        "BOOKMARK",
+        "ARCHIVE",
+        "EXAMPLE",
+        "ARGUMENTS",
+        "RETURN VALUES",
+        "ADDITIONAL INFORMATION",
+        "COMMAND",
+        "ATTRIBUTES",
+        "METHODS"
+    ],
+    "todo-tree.highlights.enabled": true,
+    "todo-tree.highlights.customHighlight": {
+        "COMMAND": {
+            "foreground": "white",
+            "background": "grey",
+            "iconColour": "grey",
+            "gutterIcon": true
+        },
+        "ARGUMENTS": {
+            "foreground": "white",
+            "background": "grey",
+            "iconColour": "grey",
+            "gutterIcon": true
+        },
+        "RETURN VALUES": {
+            "foreground": "white",
+            "background": "grey",
+            "iconColour": "grey",
+            "gutterIcon": true
+        },
+        "ADDITIONAL INFORMATION": {
+            "foreground": "white",
+            "background": "grey",
+            "iconColour": "grey",
+            "gutterIcon": true
+        },
+        "ATTRIBUTES": {
+            "foreground": "white",
+            "background": "grey",
+            "iconColour": "grey",
+            "gutterIcon": true
+        },
+        "METHODS": {
+            "foreground": "white",
+            "background": "grey",
+            "iconColour": "grey",
+            "gutterIcon": true
+        },
+        "TODO": {
+            "foreground": "black",
+            "background": "yellow",
+            "iconColour": "yellow",
+            "gutterIcon": true
+        },
+        "BOOKMARK": {
+            "foreground": "white",
+            "background": "blue",
+            "iconColour": "blue",
+            "gutterIcon": true
+        },
+        "INFO": {
+            "foreground": "white",
+            "background": "green",
+            "iconColour": "green",
+            "gutterIcon": true
+        },
+        "IMPORTANT": {
+            "foreground": "white",
+            "background": "red",
+            "iconColour": "red",
+            "gutterIcon": true
+        }
+    },
+    "bracket-pair-colorizer-2.colors": [
+        "Crimson",
+        "Limegreen",
+        "Darkorange",
+        "Dodgerblue",
+        "Gold",
+        "Darkviolet",
+        "Deeppink"
+    ],
+    "cSpell.words": [
+        "automl",
+        "azureml",
+        "conda",
+        "cython",
+        "databricks",
+        "dbfs",
+        "dbutils",
+        "dtype",
+        "hana",
+        "hdbcli",
+        "iloc",
+        "keras",
+        "kubernetes",
+        "loky",
+        "lstm",
+        "lxml",
+        "ndarray",
+        "numpy",
+        "odbc",
+        "openpyxl",
+        "parallelization",
+        "psutil",
+        "pyodbc",
+        "pyspark",
+        "rsplit",
+        "sklearn",
+        "tfrecord",
+        "unmount",
+        "verovis"
+    ]
 }
