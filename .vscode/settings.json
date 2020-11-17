@@ -4,6 +4,7 @@
     //          https://www.python.org/downloads/windows/
     //       and (optionally) create a virtual Environment by using: python -m venv "<Path to the virtual Environment Folder>"
     //       The required Python Packages can be installed by using: pip install -r "<Path to a requirements.txt File>"
+    //       For further Information about the Python Environment Setup, please refer to 'Project_Setup_and_Management_using_Azure_DevOps.pdf' in the Documents Folder
     "editor.wordWrap": "on",
     "editor.mouseWheelZoom": true,
     "editor.wrappingIndent": "indent",
