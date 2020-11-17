@@ -4,7 +4,11 @@
 		"dockerfile": "Dockerfile",
 		"context": "..",
 		"args": {
-			"VARIANT": "3.7"
+			"VARIANT": "3.7",
+			"INSTALL_NODE": "true",
+			//"NODE_VERSION": "lts/*"
+			// INFO: If you plan to use the SAP HANA SQLTools Extension, currently only Node.js 12 is supported!
+			"NODE_VERSION": "12.19.0"
 		}
 	},
 	"settings": {
@@ -35,7 +39,8 @@
 		"ms-python.vscode-pylance",
 		"mechatroner.rainbow-csv",
 		"ms-mssql.mssql",
-		"alexcvzz.vscode-sqlite",
+		// INFO: Enable if you plan to use SQLite Databases (e.g. during Django Web Development)
+		// "alexcvzz.vscode-sqlite",
 		"gruntfuggly.todo-tree",
 		"visualstudioexptteam.vscodeintellicode",
 		"tomoki1207.pdf",
@@ -44,7 +49,14 @@
 		"alefragnani.bookmarks",
 		"github.vscode-pull-request-github",
 		"mtxr.sqltools",
-		"saposs.sap-hana-driver-for-sqltools"
+		// INFO: Enable, if you plan to use the SAP HANA SQLTools Extension!
+		"saposs.sap-hana-driver-for-sqltools",
+		"christian-kohler.path-intellisense"
 	],
+	// INFO: The postCreateCommand is executed after the Workspace Folder has been mounted. You can therefore execute any .sh Script in the Workspace Folder. Combine multiple Commands by using && (the Commands are executed in the Workspace Folder)
 	"postCreateCommand": "pip3 install --user -r requirements.txt",
+	// Use to make a List of Ports inside the Container available to the local System (e.g. Windows)
+	// "forwardPorts": [],
+	// Disable to connect as 'root' instead. More Info: https://code.visualstudio.com/docs/remote/containers-advanced#_adding-a-nonroot-user-to-your-dev-container
+	// "remoteUser": "vscode"
 }
