@@ -6,15 +6,20 @@
 ##       keep in mind that this also excludes those Files/Directories from being uploaded (Git Push) to a GitHub/Azure DevOps Repository.
 #.devcontainer/
 #.vscode/
-#Backup/
+Backup/
 #Data/
 #Dockerfiles/
 #Documents/
-#Models/
-#Plots/
-#Results/
-#Temp/
+Models/
+Plots/
+Results/
+Temp/
 #*.log
+
+*.env
+[Pp]rivate_*
+Compile_Advanced_Analytics_Package.py
+Advanced_Analytics_Package/
 
 # User-specific files
 *.rsuser
