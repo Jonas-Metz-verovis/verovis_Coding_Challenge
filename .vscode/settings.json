@@ -12,7 +12,7 @@
     "editor.formatOnSaveMode": "modifications",
     "git.autofetch": true,
     "git.enableSmartCommit": true,
-    "python.pythonPath": "c:\\Users\\jmetz\\Python_Local\\Python_37\\Virtual_Environments\\Python_3_7_TensorFlow_2_CPU_DB_Connect_November_2020\\Scripts\\python.exe",
+    "python.pythonPath": "C:\\Users\\jmetz\\Python_Local\\Python_37\\Virtual_Environments\\Python_3_7_TensorFlow_2_CPU_DB_Connect_November_2020\\Scripts\\python.exe",
     "python.formatting.autopep8Args": [
         "--ignore",
         "E402, E302, E305",
@@ -122,6 +122,7 @@
         "hana",
         "hdbcli",
         "iloc",
+        "jdbc",
         "keras",
         "kubernetes",
         "loky",
@@ -134,11 +135,15 @@
         "parallelization",
         "psutil",
         "pyodbc",
+        "pyplot",
         "pyspark",
+        "rpartition",
         "rsplit",
+        "shap",
         "sklearn",
         "tfrecord",
         "unmount",
-        "verovis"
+        "verovis",
+        "xgboost"
     ]
 }
