@@ -10,11 +10,12 @@ Backup/
 #Data/
 #Dockerfiles/
 #Documents/
+#Learning/
 Models/
 Plots/
 Results/
 Temp/
-#*.log
+*.log
 
 *.env
 [Pp]rivate_*

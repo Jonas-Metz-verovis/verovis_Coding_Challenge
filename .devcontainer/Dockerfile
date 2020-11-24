@@ -16,8 +16,9 @@ ARG NODE_VERSION="12.19.0"
 RUN if [ "${INSTALL_NODE}" = "true" ]; then su vscode -c "source /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 
 # INFO: Uncomment this Section to install additional Debian Packages
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+# INFO: The Package swig is needed to be able to install e.g. auto-sklearn
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends swig
 
 # INFO: Uncomment this Section to install global Node.js Packages
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1

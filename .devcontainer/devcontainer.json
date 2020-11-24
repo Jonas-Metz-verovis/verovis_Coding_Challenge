@@ -11,6 +11,21 @@
 			"NODE_VERSION": "12.19.0"
 		}
 	},
+	// INFO: Activate, if you want to connect to a remote Docker Host (e.g. a SSH Virtual Machine) using the current DevContainer.
+	//		 Further Information can be found here:
+	//		 https://code.visualstudio.com/docs/remote/containers-advanced#_developing-inside-a-container-on-a-remote-docker-host
+	//		 https://code.visualstudio.com/docs/containers/ssh
+	//		 and for the Prerequisites (OpenSSH Activation on Windows etc.)
+	//		 https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse
+	//		 https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement
+	//		 Use the SSH Key Pair which you've created during the Setup of the SSH-enabled Virtual Machine
+	//"workspaceFolder": "/workspace",
+	// INFO: Activate, if you want to mount a local Folder on the Remote SSH Target (Virtual Machine) to the remotely created Docker DevContainer,
+	//		 set the Source Path accordingly!
+	//"workspaceMount": "source=/home/azureuser/workspaces/Local/Jonas_Test,target=/workspace,type=bind,consistency=cached",
+	// INFO: Activate, if, instead of mounting an existing Folder, you want to use a Folder inside the DevContainer (e.g. to clone a Git Repository),
+	//		 you don't need to know anything about the File System of the Remote SSH Target (Virtual Machine) if you use this Approach.
+	//"workspaceMount": "source=remote-workspace,target=/workspace,type=volume",
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash",
 		"python.pythonPath": "/usr/local/bin/python",
@@ -37,6 +52,7 @@
 		"eamodio.gitlens",
 		"ms-vsliveshare.vsliveshare",
 		"ms-python.vscode-pylance",
+		"ms-toolsai.jupyter",
 		"mechatroner.rainbow-csv",
 		"ms-mssql.mssql",
 		// INFO: Enable if you plan to use SQLite Databases (e.g. during Django Web Development)
@@ -49,11 +65,17 @@
 		"alefragnani.bookmarks",
 		"github.vscode-pull-request-github",
 		"mtxr.sqltools",
+		// INFO: Running new Docker Containers inside a DevContainer (Docker-in-Docker) is currently not implemented,
+		//		 Docker is not installed in the DevContainer Image. This Extension is only activated to enable e.g. Syntax Highlighting etc.
+		//		 while working with Dockerfiles, see Extension Features https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+		"ms-azuretools.vscode-docker",
+		"mutantdino.resourcemonitor",
 		// INFO: Enable, if you plan to use the SAP HANA SQLTools Extension!
 		"saposs.sap-hana-driver-for-sqltools",
 		"christian-kohler.path-intellisense"
 	],
 	// INFO: The postCreateCommand is executed after the Workspace Folder has been mounted. You can therefore execute any .sh Script in the Workspace Folder. Combine multiple Commands by using && (the Commands are executed in the Workspace Folder)
+	// INFO: If you plan on using databricks-connect, remember to run 'databricks-connect configure' after the Container has been set-up for the first time!
 	"postCreateCommand": "pip3 install --user -r requirements.txt",
 	// Use to make a List of Ports inside the Container available to the local System (e.g. Windows)
 	// "forwardPorts": [],
